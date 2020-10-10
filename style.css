@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html,body{
+
+    height: 100%;
+    font-family: 'Inconsolata', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color:  rgb(209, 238, 255);
+}
+.container{
+    display: flex;
+    width: 700px;
+}
+.image{
+    width: 50%;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+}
+.form-data{
+    text-align: center;
+}
+.Register-box{
+
+    padding: 20px;
+    width: 50%;
+    background-color: rgb(55, 229, 235);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+h2{
+    margin-bottom: 50px;
+    font-weight: 800;
+}
+
+.box{
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+    overflow:hidden;
+}
+
+input[type="text"],input[type="password"]{
+
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(59, 20, 233);
+    padding: 5px;
+    padding-left: 45px;
+}
+
+input[type="text"]:focus~label,input[type="password"]:focus~label,
+input[type="text"]:valid~label,input[type="password"]:valid~label
+{
+opacity: 0;
+}
+label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    padding-left: 45px;
+}
+.fas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+span{
+
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: -100;
+pointer-events: none;
+border-bottom: 2px solid #2222e6;
+}
+
+input[type="text"]:focus~span,
+input[type="password"]:focus~span,
+input[type="text"]:valid~span,
+input[type="password"]:valid~span{
+
+    left: 0;
+    transition: 0.7s ease-in;
+}
+input[type="text"]:focus ~ .fas,
+input[type="password"]:focus ~ .fas{
+    
+    color: rgb(32, 141, 184);
+}
+
+input[type="submit"]{
+
+
+    border: none;
+    background: none;
+    cursor: pointer;
+    background-color: rgb(12, 112, 158);
+    color: rgb(236, 244, 248);
+    padding: 10px 40px;
+    border-radius: 25px;
+    outline: none;
+}
+input[type="submit"]:hover{
+
+    background-color: rgb(16, 129, 182);
+}
+@media(max-width:690px){
+
+.image{
+
+    display: none;
+}
+
+.container{
+
+    width: 400px;
+}
+
+.Register-box{
+width: 100%;
+}
+
+}
+
+@media(max-width:400px){
+ h2{
+     font-size: 18px;
+ }
+
+ .container{
+     width: 100vw;
+     padding: 20px;
+ }
+ .Register-box{
+     width: 100%;
+ }
+}
